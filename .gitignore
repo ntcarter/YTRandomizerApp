@@ -229,3 +229,4 @@ localDB/.idea/misc.xml
 localDB/.idea/modules.xml
 localDB/.idea/inspectionProfiles/Project_Default.xml
 localDB/.idea/inspectionProfiles/profiles_settings.xml
+androidApp/app/src/main/res/values/keys.xml
