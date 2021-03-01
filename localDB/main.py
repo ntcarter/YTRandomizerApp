@@ -1,14 +1,18 @@
-# This is a sample Python script.
+import DatabaseHandler
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print("Main Begins")
+db = DatabaseHandler.DatabaseConnector()
+db.createVideoDataTable()
+
+print("beginning insert:")
+a = db.populateVideoTableFromCSV("D:/rawDatasets/completeVideoData3.csv")
+b = db.populateVideoTableFromCSV("D:/rawDatasets/completevideodata2.csv")
+c = db.populateVideoTableFromCSV("D:/rawDatasets/completeVideoData.csv")
+
+print(f"Sheet1 inserted: {c} Times")
+print(f"Sheet2 inserted: {b} Times")
+print(f"Sheet3 inserted: {a} Times")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# Create a function that takes a channel ID and scrapes video ID's and other relevant data available
+print("Main Ends")
